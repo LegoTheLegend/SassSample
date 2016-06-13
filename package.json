@@ -4,9 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "production": "npm run cleanup && sass css/scss/style.scss css/build/style.css --style=compressed --sourcemap=none",
-    "development": "npm run cleanup && sass --watch css/scss:css/build --style=expanded",
-    "cleanup": "rm -rf css/build/*"
+    "cleanup": "rm -rf css/build/*",
+
+    "preproduction": "npm run cleanup",
+    "production": "sass css/scss/style.scss css/build/style.css --style=compressed --sourcemap=none",
+
+    "predevelopment": "npm run cleanup",
+    "development": "sass --watch css/scss:css/build --style=expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LegoTheLegend/button"
   },
   "keywords": [],
   "author": "",
