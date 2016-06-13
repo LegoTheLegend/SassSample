@@ -1,0 +1,14 @@
+{
+  "name": "SassSample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "production": "npm run cleanup && sass css/scss/style.scss css/build/style.css --style=compressed --sourcemap=none",
+    "development": "npm run cleanup && sass --watch css/scss:css/build --style=expanded",
+    "cleanup": "rm -rf css/build/*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
